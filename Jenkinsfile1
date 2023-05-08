@@ -1,6 +1,6 @@
-       pipeline{
+        pipeline{
             tools{
-                jdk 'myjava'
+                jdk 'java'
                 maven 'mymaven'
             }
             agent none
@@ -9,7 +9,7 @@
                     agent any
                     steps{
                 echo 'cloning...'
-                        git 'https://github.com/theitern/DevOpsClassCodes.git'
+                        git 'https://github.com/Eso01/DevopsBasics.git'
                     }
                 }
                 stage('Compile'){
@@ -20,7 +20,7 @@
                 }
                 }
                 stage('CodeReview'){
-                    agent {label 'slave1'}
+                    agent {label 'CloudNodes'}
                     steps{
                     
                 echo 'codeReview...'
