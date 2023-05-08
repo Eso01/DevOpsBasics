@@ -20,7 +20,7 @@
                 }
                 }
                 stage('CodeReview'){
-                    agent {label 'CloudNodes'}
+                    agent {label 'slave1'}
                     steps{
                     
                 echo 'codeReview...'
