@@ -1,6 +1,6 @@
 pipeline{
     tools{
-        jdk 'myjava'
+        jdk 'java'
         maven 'mymaven'
     }
 	agent any
@@ -8,7 +8,7 @@ pipeline{
            stage('Checkout'){
               steps{
 		 echo 'cloning..'
-                 git 'https://github.com/theitern/DevopsBasics.git'
+                 git 'https://github.com/Eso01/DevopsBasics.git'
               }
           }
           stage('Compile'){
