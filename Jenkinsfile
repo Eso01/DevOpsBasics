@@ -13,7 +13,7 @@
                     }
                 }
                 stage('Compile'){
-                    agent {label 'slave1'}
+                    agent {label 'slave2'}
                     steps{
                         echo 'compiling...'
                         sh 'mvn compile'
@@ -28,7 +28,7 @@
                     }
                 }
                 stage('UnitTest'){
-                    agent {label 'slave2'}
+                    agent {label 'slave1'}
                     steps{
                     echo 'Testing'
                         sh 'mvn test'
